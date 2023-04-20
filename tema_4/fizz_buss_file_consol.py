@@ -1,7 +1,6 @@
 import sys
 filename = sys.argv[0]
 f_in = open('fizz_buss_in.txt', 'r')
-f_out = open('fizz_buss_out.txt', 'w')
 for i in range(20):
     c=f_in.readline()
     f,b,n=c.split()
@@ -10,14 +9,13 @@ for i in range(20):
     n=int(n)
     for i in range(1,n+1):
         if i%f==0 and i%b==0:
-            print('FB',end=' ',file=f_out)
+            print('FB',end=' ')
         elif not i%f:
-            print('F',end=' ',file=f_out)
+            print('F',end=' ')
         elif not i%b:
-            print('B',end=' ',file=f_out)
+            print('B',end=' ')
         else:
-            print(i, end=' ',file=f_out)
-    print('\t',file=f_out)
-
+            print(i, end=' ')
+    print('\t')
 f_in.close()
-f_out.close()
+
